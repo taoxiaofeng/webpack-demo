@@ -8,6 +8,7 @@
 // 	}
 // }
 var path=require('path');
+var htmlWebpackPlugin = require('html-webpack-plugin');
 module.exports={
 	//entry webpack打包的入口
     entry:{
@@ -16,8 +17,22 @@ module.exports={
         a:'./src/script/a.js'
     },
     output:{
-        path:path.join(__dirname,'./dist/js'),
-//两杠的dirname
-        filename:'[name].js'
-    }
+    	filename:'js/[name]-[hash].js',
+        path:path.join(__dirname,'./dist'),//两杠的dirname
+        publicPath: 'http://cdn.com'//上线发布地址
+    },
+    plugins:[
+    	new htmlWebpackPlugin({
+    		filename:'index.html',//声明文件的名称
+    		template:'index.html',
+    		inject:false,//指定脚本所放的位置
+    		title:'webpack is good',
+    		date: new Date(),
+    		minify:{
+    			removeComments:true,//
+    			collapseWhitespace:true
+    		}
+
+    	})
+    ]
 }
