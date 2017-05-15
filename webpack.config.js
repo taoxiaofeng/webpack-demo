@@ -14,7 +14,9 @@ module.exports={
     entry:{
         // bundle:['./src/script/main.js','./src/script/a.js'] //平行的互相依赖的文件打包到一起
         main:'./src/script/main.js',
-        a:'./src/script/a.js'
+        a:'./src/script/a.js',
+        b:'./src/script/b.js',
+        c:'./src/script/c.js'
     },
     output:{
     	filename:'js/[name]-[hash].js',
@@ -23,16 +25,25 @@ module.exports={
     },
     plugins:[
     	new htmlWebpackPlugin({
-    		filename:'index.html',//声明文件的名称
+    		filename:'a.html',//声明文件的名称
     		template:'index.html',
     		inject:false,//指定脚本所放的位置
-    		title:'webpack is good',
-    		date: new Date(),
-    		minify:{
-    			removeComments:true,//
-    			collapseWhitespace:true
-    		}
-
-    	})
+    		title:'webpack is a.html',
+            excludeChunks:['b','c']
+    	}),
+        new htmlWebpackPlugin({
+            filename:'b.html',//声明文件的名称
+            template:'index.html',
+            inject:false,//指定脚本所放的位置
+            title:'webpack is b.html',
+            excludeChunks:['a','c']
+        }),
+        new htmlWebpackPlugin({
+            filename:'c.html',//声明文件的名称
+            template:'index.html',
+            inject:false,//指定脚本所放的位置
+            title:'webpack is c.html',
+            excludeChunks:['a','b']
+        })
     ]
 }
