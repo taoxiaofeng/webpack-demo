@@ -12,12 +12,8 @@ module.exports={
             {
                 test:/\.js$/,
                 loader:'babel-loader',
-                exclude:[
-                 path.resolve(__dirname, './node_modules/'),
-                ],  //打包排除的范围
-                include:[
-                 path.resolve(__dirname, './src/'),
-                ],
+                include:path.resolve(__dirname, 'src'),//打包包含的范围,
+                exclude:path.resolve(__dirname, 'node_modules'),//打包排除的范围,  
                 query:{
                     presets:['env']
                 }
