@@ -1,19 +1,37 @@
 {
-  "name": "webpack-demo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack --config webpack.config.js --progress --display-modules --colors --display-reasons"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
-    "babel-preset-env": "^1.4.0",
-    "html-webpack-plugin": "^2.28.0",
-    "webpack": "^2.5.1"
-  }
+    "name": "webpack-demo",
+    "version": "1.0.0",
+    "description": "webpack demo",
+    "private": true,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-core": "^6.24.1",
+        "babel-loader": "^7.0.0",
+        "babel-preset-env": "^1.4.0",
+        "css-loader": "^1.0.0",
+        "csv-loader": "^3.0.2",
+        "file-loader": "^1.1.11",
+        "html-webpack-plugin": "^2.28.0",
+        "style-loader": "^0.21.0",
+        "webpack": "^4.16.2",
+        "webpack-cli": "^3.1.0",
+        "xml-loader": "^1.2.1"
+    },
+    "dependencies": {
+        "lodash": "^4.17.10"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/taoxiaofeng/webpack-demo.git"
+    },
+    "keywords": [],
+    "bugs": {
+        "url": "https://github.com/taoxiaofeng/webpack-demo/issues"
+    },
+    "homepage": "https://github.com/taoxiaofeng/webpack-demo#readme"
 }
