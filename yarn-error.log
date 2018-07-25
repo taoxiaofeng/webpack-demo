@@ -1,0 +1,75 @@
+Arguments: 
+  D:\Program Files\nodejs\node.exe D:\Program Files\nodejs\node_global\node_modules\yarn\bin\yarn.js add webpack-contrib/html-webpack-plugin -D
+
+PATH: 
+  C:\Users\taoxi\bin;D:\Program Files\Git\mingw64\bin;D:\Program Files\Git\usr\local\bin;D:\Program Files\Git\usr\bin;D:\Program Files\Git\usr\bin;D:\Program Files\Git\mingw64\bin;D:\Program Files\Git\usr\bin;C:\Users\taoxi\bin;D:\Program Files\nodejs\node_global;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;D:\Program Files\Git\cmd;D:\Program Files\nodejs\node_global\node_modules\cnpm\bin;D:\Program Files\Java\jdk1.8.0_144\bi;D:\Program Files\Java\jdk1.8.0_144\jre\bin;.;D:\Program Files\Java\jdk1.8.0_144\jre;D:\Program Files\Java\jdk1.8.0_144\bin;D:\Program Files\Java\jdk1.8.0_144\lib\dt.jar;D:\Program Files\Java\jdk1.8.0_144\lib\tools.jar;C:\Windows\System32;D:\Program Files (x86)\Yarn\bin;D:\Program Files\nodejs;D:\Program Files\Microsoft VS Code\bin;C:\Users\taoxi\AppData\Local\Microsoft\WindowsApps;D:\apache-maven-3.2.1\bin;C:\Users\taoxi\AppData\Local\Yarn\bin;C:\Users\taoxi\AppData\Local\GitHubDesktop\bin;C:\Users\taoxi\AppData\Roaming\npm;D:\Program Files\Git\usr\bin\vendor_perl;D:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.7.0
+
+Node version: 
+  10.5.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: config/es-to-primitive: Invalid URI "config/es-to-primitive"
+      at Request.module.exports.Request.init (D:\Program Files\nodejs\node_global\node_modules\yarn\lib\cli.js:134763:31)
+      at new Request (D:\Program Files\nodejs\node_global\node_modules\yarn\lib\cli.js:134617:8)
+      at request (D:\Program Files\nodejs\node_global\node_modules\yarn\lib\cli.js:131616:10)
+      at RequestManager.execute (D:\Program Files\nodejs\node_global\node_modules\yarn\lib\cli.js:65708:15)
+      at RequestManager.shiftQueue (D:\Program Files\nodejs\node_global\node_modules\yarn\lib\cli.js:65735:10)
+      at D:\Program Files\nodejs\node_global\node_modules\yarn\lib\cli.js:65486:13
+      at new Promise (<anonymous>)
+      at new F (D:\Program Files\nodejs\node_global\node_modules\yarn\lib\cli.js:23451:28)
+      at RequestManager.request (D:\Program Files\nodejs\node_global\node_modules\yarn\lib\cli.js:65484:19)
+      at NpmRegistry.request (D:\Program Files\nodejs\node_global\node_modules\yarn\lib\cli.js:31153:32)
+
+npm manifest: 
+  {
+      "name": "webpack-demo",
+      "version": "1.0.0",
+      "description": "webpack demo",
+      "private": true,
+      "scripts": {
+          "test": "echo \"Error: no test specified\" && exit 1",
+          "start": "webpack --mode production",
+          "build": "webpack --mode development"
+      },
+      "author": "",
+      "license": "ISC",
+      "devDependencies": {
+          "babel-core": "^6.24.1",
+          "babel-loader": "^7.0.0",
+          "babel-preset-env": "^1.4.0",
+          "css-loader": "^1.0.0",
+          "csv-loader": "^3.0.2",
+          "extract-text-webpack-plugin": "^4.0.0-beta.0",
+          "file-loader": "^1.1.11",
+          "html-webpack-plugin": "^2.30.1",
+          "style-loader": "^0.21.0",
+          "webpack": "^4.16.2",
+          "webpack-cli": "^3.1.0",
+          "xml-loader": "^1.2.1"
+      },
+      "dependencies": {
+          "es-to-primitive": "^1.1.1",
+          "lodash": "^4.17.10"
+      },
+      "repository": {
+          "type": "git",
+          "url": "git+https://github.com/taoxiaofeng/webpack-demo.git"
+      },
+      "keywords": [],
+      "bugs": {
+          "url": "https://github.com/taoxiaofeng/webpack-demo/issues"
+      },
+      "homepage": "https://github.com/taoxiaofeng/webpack-demo#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

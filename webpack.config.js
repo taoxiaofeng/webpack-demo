@@ -1,10 +1,20 @@
-var path = require('path');
-// var htmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 module.exports = {
-    //entry webpack打包的入口
-    entry: './src/index.js',
+    entry: {
+        app: './src/index.js',
+        print: './src/print.js'
+    },
+    plugins: [
+        new CleanWebpackPlugin(['dist']), //清理 /dist 文件夹
+        new HtmlWebpackPlugin({ //简化HTML文件的创建，以便为您的webpack包提供服务
+            title: 'Output Management'
+        })
+    ],
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist') //两杠的dirname
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'dist')
     }
-}
+};
