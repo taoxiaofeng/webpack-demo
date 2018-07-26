@@ -1,3 +1,3 @@
 export default function printMe() {
-    console.log('获取 print.js!');
+    console.log('Updating print.js...');
 }
