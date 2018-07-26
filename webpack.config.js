@@ -30,5 +30,6 @@ module.exports = {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: '/'
-    }
+    },
+    mode: "production" //通过 "mode" 配置选项轻松切换到压缩输出
 };
