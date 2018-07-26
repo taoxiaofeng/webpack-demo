@@ -7,9 +7,9 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "watch": "webpack --watch",
-        "start": "webpack-dev-server --open",
+        "start": "webpack-dev-server --open --config webpack.dev.js",
         "server": "node server.js",
-        "build": "webpack"
+        "build": "webpack --config webpack.prod.js"
     },
     "author": "",
     "license": "ISC",
@@ -33,7 +33,8 @@
     },
     "dependencies": {
         "es-to-primitive": "^1.1.1",
-        "lodash": "^4.17.10"
+        "lodash": "^4.17.10",
+        "webpack-merge": "^4.1.3"
     },
     "repository": {
         "type": "git",
